@@ -36,7 +36,7 @@ router.delete('/moviecategory/delete/:id',(req,res) => {
 
     })
 })
-//show all connection
+//show all connections
 router.get('/moviecategory', (req,res) => {
     var sql = `SELECT m.nama AS NAMA_MOVIE, c.nama AS NAMA_CATEGORY FROM movcat mc JOIN movies m ON mc.movie_id = m.id JOIN categories c ON mc.category_id = c.id`;
 

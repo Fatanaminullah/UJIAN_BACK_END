@@ -1,7 +1,7 @@
 const router = require('express').Router();
 const connect = require('../connection/connection')
 
-//add movies
+//add movie
 router.post('/movies/add', (req,res) => {
     var sql = `INSERT INTO movies SET ?`;
     var sql2 = `SELECT * FROM movies`;
@@ -17,7 +17,7 @@ router.post('/movies/add', (req,res) => {
         })
     })
 })
-//edit movies
+//edit movie
 router.patch('/movies/edit/:idmovies', (req,res) => {
     var data = [req.body, req.params.idmovies]
     var sql = `UPDATE movies SET ? WHERE id = ?`
@@ -34,7 +34,7 @@ router.patch('/movies/edit/:idmovies', (req,res) => {
 
     })
 })
-//delete movies
+//delete movie
 router.delete('/movies/delete/:idmovies', (req,res) => {
     var sql = `DELETE FROM movies WHERE id = ?`
     var sql2 = `SELECT * FROM movies`
@@ -52,7 +52,7 @@ router.delete('/movies/delete/:idmovies', (req,res) => {
     })
 
 })
-//show all movies
+//show all movie
 router.get('/movies', (req,res) => {
     var sql = `SELECT * FROM movies`
 

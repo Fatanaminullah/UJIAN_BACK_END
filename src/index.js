@@ -5,7 +5,7 @@ const categoryRouter = require('./router/categoryRouter')
 const connectionRouter = require('./router/connectionRouter')
 
 const ex = express()
-const port = process.env.PORT
+const port = 6666
 
 ex.use(express.json())
 ex.use(movieRouter)

@@ -1,7 +1,7 @@
 const router = require('express').Router();
 const connect = require('../connection/connection')
 
-//add categories
+//add category
 router.post('/categories/add', (req,res) => {
     var sql = `INSERT INTO  categories SET ?`;
     var sql2 = `SELECT * FROM categories`;
@@ -17,7 +17,7 @@ router.post('/categories/add', (req,res) => {
         })
     })
 })
-//edit categories
+//edit category
 router.patch('/categories/edit/:idcategory', (req,res) => {
     var data = [req.body, req.params.idcategory]
     var sql = `UPDATE categories SET ? WHERE id = ?`
